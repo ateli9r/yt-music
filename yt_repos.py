@@ -123,6 +123,8 @@ class YoutubeMusicProdRepository(YoutubeMusicRepository):
             # 파일경로 보정
             if os.path.exists(outputFilePath + '.webm'):
                 os.rename(outputFilePath + '.webm', outputFilePath)
+            if os.path.exists(outputFilePath + '.mkv'):
+                os.rename(outputFilePath + '.mkv', outputFilePath)
         
         except Exception as e:
             print(e)
